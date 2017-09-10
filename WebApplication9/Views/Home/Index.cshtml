@@ -1,0 +1,39 @@
+﻿@model WebApplication9.Models.Login
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>User Details</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    
+    <div>
+        @Html.LabelFor(Model=>Model.UserName)
+    </div>
+
+    <div>
+        @Html.EditorFor(Model => Model.UserName)
+
+    </div>
+
+
+
+
+
+    <div>
+        @Html.LabelFor(Model => Model.Password)
+    </div>
+
+    <div>
+        @Html.EditorFor(Model => Model.Password)
+
+    </div>
+
+
+    <div>
+        <input type="submit" value="Submit"/>
+    </div>
+
+}
